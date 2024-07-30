@@ -1,0 +1,1 @@
+print("Ortal halas")
