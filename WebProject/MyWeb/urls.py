@@ -14,5 +14,6 @@ urlpatterns = [
     path('intermediate/', views.intermediate, name='intermediate'),
     path('professional/', views.professional, name='professional'),
     path('expert/', views.expert, name='expert'),
+    
 ]
 
