@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Level</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Ensure to link your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Beginner Level</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'start_learning' %}">Start Learning!</a>
+    </nav>
+    <main>
+        <h2>Welcome to the Beginner Level</h2>
+        <p>Here you will learn the basics of coding. This includes understanding fundamental concepts, syntax, and simple programming practices.</p>
+        <h3>Topics Covered:</h3>
+        <ul>
+            <li>Introduction to HTML</li>
+            <li>Basics of CSS</li>
+            <li>Getting Started with JavaScript</li>
+            <li>Basic Debugging Techniques</li>
+        </ul>
+    </main>
+    <footer>
+        <p>Code Academy &copy; 2024</p>
+    </footer>
+</body>
+</html>

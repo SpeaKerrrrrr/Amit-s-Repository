@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Level</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Ensure to link your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Expert Level</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'start_learning' %}">Start Learning!</a>
+    </nav>
+    <main>
+        <h2>Welcome to the Expert Level</h2>
+        <p>This is the final level where you will master advanced topics and cutting-edge technologies.</p>
+        <h3>Topics Covered:</h3>
+        <ul>
+            <li>Machine Learning and AI</li>
+            <li>System Design and Architecture</li>
+            <li>Contributing to Open Source Projects</li>
+            <li>Advanced Security Practices</li>
+        </ul>
+    </main>
+    <footer>
+        <p>Code Academy &copy; 2024</p>
+    </footer>
+</body>
+</html>

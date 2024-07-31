@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermediate Level</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Ensure to link your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Intermediate Level</h1>
+    </header>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'start_learning' %}">Start Learning!</a>
+    </nav>
+    <main>
+        <h2>Welcome to the Intermediate Level</h2>
+        <p>At this level, you'll dive into more complex concepts and tools used in web development and programming.</p>
+        <h3>Topics Covered:</h3>
+        <ul>
+            <li>Advanced CSS Techniques</li>
+            <li>JavaScript Libraries and Frameworks</li>
+            <li>Introduction to Version Control with Git</li>
+            <li>Responsive Web Design</li>
+        </ul>
+    </main>
+    <footer>
+        <p>Code Academy &copy; 2024</p>
+    </footer>
+</body>
+</html>

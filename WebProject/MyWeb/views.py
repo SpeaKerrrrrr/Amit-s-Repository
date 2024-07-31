@@ -37,6 +37,19 @@ def profile(request):
 def about(request):
     return render(request, 'about.html')
 
+def beginner(request):
+    return render(request, 'beginner.html')
 
+def intermediate(request):
+    return render(request, 'intermediate.html')
+
+def professional(request):
+    return render(request, 'professional.html')
+
+def expert(request):
+    return render(request, 'expert.html')
+
+def start_learning(request):
+    return render(request, 'start_learning.html')
 # Create your views here.
 # functions are HERE
