@@ -14,7 +14,7 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)  # Log in the user after registration
-            return redirect('profile')  # Redirect to a profile page or home
+            return redirect('home')  # Redirect to a profile page or home
     else:
         form = RegisterForm()
     return render(request, 'register.html', {'form': form})
@@ -26,7 +26,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)  # Log in the user
-            return redirect('profile')  # Redirect to the profile page or another page
+            return redirect('home')  # Redirect to the profile page or another page
     else:
         form = AuthenticationForm()
     return render(request, 'login.html', {'form': form})
