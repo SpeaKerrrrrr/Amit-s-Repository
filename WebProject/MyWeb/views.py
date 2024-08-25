@@ -57,5 +57,5 @@ def start_learning(request):
     return render(request, 'start_learning.html')
 
 def beginner_questions(request):
-    # Here you would have your logic to fetch and display the questions one by one
     return render(request, 'beginner_questions.html')
+    
