@@ -5,7 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beginner Level</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Ensure to link your CSS file -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #0056b3;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #004080;
+        }
+        main {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #e2e2e2;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,17 +96,16 @@
     </nav>
     <main>
         <h2>Welcome to the Beginner Level</h2>
-        <p>Here you will learn the basics of coding. This includes understanding fundamental concepts, syntax, and simple programming practices.</p>
+        <p>Here you will learn the basics of coding, including understanding fundamental concepts, syntax, and simple programming practices.</p>
         <h3>Topics Covered:</h3>
         <ul>
-            <li>Introduction to HTML</li>
-            <li>Basics of CSS</li>
-            <li>Getting Started with JavaScript</li>
-            <li>Basic Debugging Techniques</li>
+            <li>Basic coding problems and their solutions</li>
+            <li>Introduction to variables and data types</li>
+            <li>Simple control structures (if-else, loops)</li>
+            <li>Functions and their uses</li>
         </ul>
+        <a href="{% url 'beginner_questions' %}" class="button">Let's Start</a>
     </main>
-    <footer>
-        <p>Code Academy &copy; 2024</p>
-    </footer>
+
 </body>
 </html>
