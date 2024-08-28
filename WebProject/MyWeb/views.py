@@ -77,4 +77,14 @@ def check_answer(request):
     else:
         return render(request, 'beginner_questions.html')  # Render the question page if the request method isn't POST
 
+def beginner_question_2(request):
+    return render(request, 'beginner_question_2.html')
+
+def check_answer_2(request, answer):
+    correct_answer = '4'
+    
+    if answer == correct_answer:
+        return render(request, 'answer_correct.html')  # or render a specific template for correct answer
+    else:
+        return render(request, 'answer_incorrect.html')  # or render a specific template for incorrect answer
     

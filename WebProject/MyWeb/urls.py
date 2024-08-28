@@ -16,4 +16,6 @@ urlpatterns = [
     path('expert/', views.expert, name='expert'),
     path('beginner/questions/', views.beginner_questions, name='beginner_questions'),
     path('check_answer/', views.check_answer, name='check_answer'),
+    path('beginner/questions/2/', views.beginner_question_2, name='beginner_question_2'),
+    path('check_answer_2/<str:answer>/', views.check_answer_2, name='check_answer_2'),
 ]
