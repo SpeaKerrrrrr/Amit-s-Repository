@@ -53,18 +53,21 @@
         .question {
             margin-bottom: 1rem;
         }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
+        .answers {
+            margin: 1rem 0;
+        }
+        .answer-button {
+            display: block;
+            padding: 10px;
             color: #fff;
             background-color: #007bff;
             text-decoration: none;
             border-radius: 5px;
             text-align: center;
             font-size: 1rem;
-            margin-top: 1rem;
+            margin: 0.5rem 0;
         }
-        .button:hover {
+        .answer-button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -85,6 +88,18 @@
             print("Hello, World!")
             </code>
         </pre>
+        <form method="post" action="{% url 'check_answer' %}">
+            {% csrf_token %}
+            <input type="radio" name="answer" value="Hello, World!" id="option1">
+            <label for="option1">Hello, World!</label><br>
+            <input type="radio" name="answer" value="Hello World!" id="option2">
+            <label for="option2">Hello World!</label><br>
+            <input type="radio" name="answer" value="Hi, World!" id="option3">
+            <label for="option3">Hi, World!</label><br>
+            <input type="radio" name="answer" value="Hi World!" id="option4">
+            <label for="option4">Hi World!</label><br><br>
+            <button type="submit" class="answer-button">Submit</button>
+        </form>
     </main>
 </body>
 </html>

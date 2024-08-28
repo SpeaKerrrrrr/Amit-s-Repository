@@ -15,5 +15,5 @@ urlpatterns = [
     path('professional/', views.professional, name='professional'),
     path('expert/', views.expert, name='expert'),
     path('beginner/questions/', views.beginner_questions, name='beginner_questions'),
-    
+    path('check_answer/', views.check_answer, name='check_answer'),
 ]

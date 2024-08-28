@@ -59,3 +59,22 @@ def start_learning(request):
 def beginner_questions(request):
     return render(request, 'beginner_questions.html')
     
+from django.shortcuts import render, redirect
+
+def beginner_questions(request):
+    return render(request, 'beginner_questions.html')
+
+def check_answer(request):
+    correct_answer = 'Hello, World!'
+    
+    if request.method == 'POST':
+        user_answer = request.POST.get('answer')  # Get the user's answer from the form
+
+        if user_answer == correct_answer:
+            return render(request, 'answer_correct.html')  # Render correct answer page
+        else:
+            return render(request, 'answer_incorrect.html')  # Render incorrect answer page
+    else:
+        return render(request, 'beginner_questions.html')  # Render the question page if the request method isn't POST
+
+    
