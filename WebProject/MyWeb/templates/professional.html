@@ -5,7 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Level</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'styles.css' %}"> <!-- Ensure to link your CSS file -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #0056b3;
+            padding: 0.5rem;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #004080;
+        }
+        main {
+            max-width: 960px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        h2 {
+            color: #007bff;
+            border-bottom: 2px solid #e2e2e2;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+
+        /* Button styles */
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,21 +92,18 @@
     </header>
     <nav>
         <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'start_learning' %}">Start Learning!</a>
     </nav>
     <main>
         <h2>Welcome to the Professional Level</h2>
-        <p>Here, you will learn about advanced concepts and practices that are crucial for a professional developer.</p>
+        <p>Here you will learn the basics of coding, including understanding fundamental concepts, syntax, and simple programming practices.</p>
         <h3>Topics Covered:</h3>
         <ul>
-            <li>Advanced JavaScript and ES6+</li>
-            <li>Backend Development with Frameworks</li>
-            <li>Database Management and SQL</li>
-            <li>API Development and Integration</li>
+            <li>Core Python Syntax: Understanding basic constructs like variables, data types, control flow, functions, and lists.</li>
+            <li>Problem-Solving: Applying logical thinking and problem-solving skills to solve coding challenges.</li>
+            <li>Data Structures: Working with lists, dictionaries, and other fundamental data structures.</li>
+            <li>Algorithm Basics: Implementing simple algorithms like sorting and searching.</li>
         </ul>
+        <a href="{% url 'professional_questions' %}?index=0">Go to first question</a>
     </main>
-    <footer>
-        <p>Code Academy &copy; 2024</p>
-    </footer>
 </body>
 </html>

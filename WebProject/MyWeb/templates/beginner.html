@@ -92,7 +92,6 @@
     </header>
     <nav>
         <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'start_learning' %}">Start Learning!</a>
     </nav>
     <main>
         <h2>Welcome to the Beginner Level</h2>
@@ -104,8 +103,7 @@
             <li>Simple control structures (if-else, loops)</li>
             <li>Functions and their uses</li>
         </ul>
-        <a href="{% url 'beginner_questions' %}" class="button">Let's Start</a>
+        <a href="{% url 'beginner_questions' %}?index=0">Go to first question</a>
     </main>
-
 </body>
 </html>

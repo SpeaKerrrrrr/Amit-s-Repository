@@ -69,9 +69,10 @@
     <main>
         <h2>Oops!</h2>
         <p>Your answer is incorrect. Try again!</p>
-        <a href="{% url 'beginner_questions' %}" class="button">Try Again</a>
-        <a href="{% url 'beginner_question_2' %}" class="button">Next Question</a>
-
+        <a href="{% url 'beginner_question' question_number=previous_question %}" class="button">Try Again</a>
+        {% if next_question %}
+            <a href="{% url 'beginner_question' question_number=next_question %}" class="button">Next Question</a>
+        {% endif %}
     </main>
 </body>
 </html>

@@ -59,9 +59,12 @@
     </header>
     <main>
         <h2>Well done!</h2>
-        <p>Your answer is correct.</p>
-        <a href="{% url 'beginner_question_2' %}" class="button">Next Question</a>
-
+        <p>Your answer is correct.</p> 
+        {% if next_question %}
+            <a href="{% url 'beginner_question' question_number=next_question %}" class="button">Next Question</a>
+        {% else %}
+            <a href="{% url 'beginner' %}" class="button">Finish</a>
+        {% endif %}
     </main>
 </body>
 </html>
